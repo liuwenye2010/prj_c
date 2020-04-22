@@ -4,7 +4,7 @@ CC=gcc
 CFLAGS=-g -fno-short-enums -O2 -Os -fdata-sections -ffunction-sections -Wall -fno-exceptions 
 DEPS= 
 
-TARGET	= main.exe
+TARGET	= create_mono_wave.exe
 
 HEADERS 	= $(wildcard *.h)
 SRC 		= $(wildcard *.c)
@@ -37,4 +37,4 @@ $(bin-obj):$(TARGET)
 	objcopy -v -S -g -O binary $< $@   
    
 clean:
-	rm -rf *.o *.map *.dis *.size *.bin $(target_all)
+	rm -rf *.o *.map *.dis *.size *.bin *.wav $(target_all)
