@@ -11,7 +11,6 @@ debug
 *.rpt
 *.nm
 *.size
-*.pdf
 *.wav
 *.so
 *.out
