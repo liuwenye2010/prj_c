@@ -13,3 +13,7 @@ debug
 *.size
 *.pdf
 *.wav
+*.so
+*.out
+*.depend 
+*.layout
