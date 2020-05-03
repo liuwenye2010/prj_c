@@ -16,3 +16,5 @@ debug
 *.out
 *.depend 
 *.layout
+keil_code
+arduino
