@@ -139,8 +139,18 @@ int32_t main(int32_t argc, char * argv[])
 	ShowProgress(5,10);
 	delay(100000);
 	ShowProgress(10,10);
-	
 	show_result(true);
+	
+    uint32_t  ptx = 0x9; 
+	printf("ptx==%2X\n",ptx);
+    printf("ptx==%02X\n",ptx); 	
+	ptx = 0x89; 
+	printf("ptx==%2X\n",ptx);
+    printf("ptx==%02X\n",ptx);
+	ptx = 0x789; 
+	printf("ptx==%2X\n",ptx);
+    printf("ptx==%02X\n",ptx);
+
 	return 0;
 	
   }while(0);

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <float.h>
 
 #define Q31_T(val)   (((val)>=  1.f)?((1U<<31)-1):(((val)<  -1.f)?(1<<31U):((int32_t)((val)*2*(float)(1<<30)))<<0))
 #define Q23_T(val)   (((val)>=  1.f)?((1U<<31)-1):(((val)<  -1.f)?(1<<31U):((int32_t)((val)*(float)(1<<23)))<<8))
@@ -91,6 +92,11 @@ int main()
     printf("FLOAT_FROM_Q8_23_T(0x%x) == %f\r\n", udval_3, FLOAT_FROM_Q8_23_T(udval_3));
     printf("FLOAT_FROM_Q8_23_T(0x%x) == %f\r\n", udval_4, FLOAT_FROM_Q8_23_T(udval_4));
 
+    printf("type cast\n");
+    int32_t int_a = -555;
+    uint32_t uint_b = 0xFFFFF419;
+    int32_t int_c  = int_a + uint_b;
+    printf("int_c == int_a + uint_b == %d\n",int_c);
 
     return 0;
 
