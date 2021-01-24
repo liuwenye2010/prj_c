@@ -31,7 +31,65 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="../argc_argv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../circular_buffer_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../clist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../clist.h" />
+		<Unit filename="../clist_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../dlist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../dlist.h" />
+		<Unit filename="../dlist_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../errno_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../file_io_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../graph_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../hw_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../link_list_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../list.h" />
+		<Unit filename="../main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../pingpong_buffer_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../queue_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../slist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../slist.h" />
+		<Unit filename="../slist_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../stdarg_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../tree_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../uart_io_demo.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

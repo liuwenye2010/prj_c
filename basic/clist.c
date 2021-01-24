@@ -43,8 +43,14 @@ int32_t clist_ins_next( Clist_T *list, ClistElmt_T *element, const void* data)
     }
     else  //if the list is not  empty
     {
+#define INSERT_AFTER_INTEM
+#ifdef INSERT_AFTER_INTEM
         new_element->next = element->next;
         element->next = new_element;
+#else
+        new_element->next = element->next;
+        element->next = new_element;
+#endif 
     }
 
     //update the size
@@ -72,7 +78,7 @@ int32_t clist_rem_next( Clist_T *list, ClistElmt_T *element,  void** data)
         if(old_element = list->head)  //if item be remove is the head, then update the head.
             list->head = old_element->next; 
     }
-    
+
     free(old_element);
     list->size--;
     return 0;

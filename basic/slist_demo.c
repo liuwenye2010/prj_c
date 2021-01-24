@@ -10,13 +10,16 @@
 
 int32_t slist_demo(void)
 {
+
+     printf("\n====================== DEMO Single linked List  START=================================\n");
+     
      int32_t err_no = 0;
      #define BUF_SIZE   100
      Slist_T   list;
      Slist_T   *plist = &list;
      void *data_buf1 = NULL;
      void *data_buf2 = NULL;
-
+    
      do
      {
          //init one list
@@ -65,6 +68,7 @@ int32_t slist_demo(void)
         if (data_buf1) free(data_buf1);
         if (data_buf2) free(data_buf2);
      }
+     printf("\n====================== DEMO Signle linked List  END=================================\n");
 
      return err_no;
 //error:

@@ -3,9 +3,14 @@
 #include <string.h>
 
 #define INCLUDE_SLIST_DMEO  1
+#define INCLUDE_CLIST_DEMO  1
 
 #if  INCLUDE_SLIST_DMEO 
 extern int32_t slist_demo(void);
+#endif 
+
+#if  INCLUDE_CLIST_DEMO 
+extern int32_t clist_demo(void);
 #endif 
 
 #define false 0 
@@ -84,6 +89,10 @@ int32_t main(int32_t argc, char * argv[])
     //do something here for demo demo 
 #if INCLUDE_SLIST_DMEO
 	slist_demo();
+#endif 
+
+#if INCLUDE_CLIST_DEMO
+	clist_demo();
 #endif 
 	
 	//end; 

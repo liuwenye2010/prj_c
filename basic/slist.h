@@ -42,7 +42,7 @@ int32_t slist_rem_next( Slist_T *list, SlistElmt_T *element, void** data);//remo
 #define slist_size(list)  ((list)->size)
 #define slist_head(list)  ((list)->head)
 #define slist_tail(list)  ((list)->tail)
-#define slist_is_head(list,element)  ((element) == (list)-->head ? 1 :0)
+#define slist_is_head(list,element)  ((element) == (list)->head ? 1 :0)
 #define slist_is_tail(element) ((element)->next ==NULL ? 1: 0 )
 #define slist_data(element)   ((element)->data)
 #define slist_next(element)   ((element)->next)

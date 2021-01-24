@@ -41,7 +41,7 @@ int32_t clist_rem_next( Clist_T *list, ClistElmt_T *element, void** data);//remo
 
 #define clist_size(list)  ((list)->size)
 #define clist_head(list)  ((list)->head)
-#define clist_is_head(list,element)  ((element) == (list)-->head ? 1 :0)
+#define clist_is_head(list,element)  ((element) == (list)->head ? 1 :0)
 #define clist_data(element)   ((element)->data)
 #define clist_next(element)   ((element)->next)
 
