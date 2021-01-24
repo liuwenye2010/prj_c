@@ -17,3 +17,6 @@ debug
 *.depend 
 *.layout
 keil_code
+doxygen
+.vscode
+.vs
