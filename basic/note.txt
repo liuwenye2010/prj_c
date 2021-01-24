@@ -1,0 +1,3 @@
+git push without passowrd 
+https://www.tilcode.com/push-github-without-entering-username-password-windows-git-bash/
+git config --global credential.helper wincred
