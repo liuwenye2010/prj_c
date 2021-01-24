@@ -13,6 +13,7 @@ struct i2c_s
   /*
   other control members 
   */
+   int32_t cur_idx ; // recording current posiston for reading 
 } g_i2c;
 
 //request list nodes 
@@ -43,8 +44,12 @@ int32_t print_out_dlist_nodes (struct list_s* head) {
     return n_num;
 }
 
-void double_link_list_demo(void)  {
+void double_link_list_demo(void)  
+{
     //some data_buffer pool 
+
+     printf("\n====================== DEMO (pratical double list)   START=================================\n");
+
     #define BUF_NUM   5
     #define BUF_SIZE  10
     uint32_t data_buf_pool[BUF_NUM][BUF_SIZE];
@@ -77,7 +82,8 @@ void double_link_list_demo(void)  {
      //delete item from the list
      
      //delete the double list  (note still keep the head node)
-    
+     printf("\n====================== DEMO (pratical double list)   END =================================\n");
+     
 	
 	
 }
