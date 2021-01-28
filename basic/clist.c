@@ -23,7 +23,7 @@ void clist_destory(Clist_T *list)
            list->destory(data); // free memory by data pointer
        }
    }
-   memset(list,0, sizeof(list));
+   memset(list,0, sizeof(Clist_T));
    return;
 }
 
