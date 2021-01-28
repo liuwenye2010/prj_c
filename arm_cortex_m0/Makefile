@@ -17,7 +17,7 @@ MCU:=$(mcu-y)
 TRUE=y
 
 CMSIS:=4.2.0
-CROSS:="C:/Program Files (x86)""/GNU Tools ARM Embedded/4.8 2014q2/bin/arm-none-eabi-"
+CROSS:="C:/Program Files (x86)""/GNU Tools ARM Embedded/7 2017-q4-major/bin/arm-none-eabi-"
 
 
 MCUCC=$(CROSS)gcc
