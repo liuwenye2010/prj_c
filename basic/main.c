@@ -1,29 +1,37 @@
-#include <stdint.h> 
-#include <stdio.h> 
+#include <stdint.h>
+#include <stdio.h>
 #include <string.h>
 
 #define INLCUDE_LIST_DEMO   1
 #define INCLUDE_SLIST_DMEO  1
 #define INCLUDE_CLIST_DEMO  1
-#define INCLUDE_DLIST_DEMO  0 
+#define INCLUDE_DLIST_DEMO  0
+#define INCLUDE_STACK_DEMO  0
+#define INCLUDE_QUEUE_DEMO  1
+
 
 
 
 #if  INLCUDE_LIST_DEMO
 void double_link_list_demo(void);
-#endif 
+#endif
 
-#if  INCLUDE_SLIST_DMEO 
+#if  INCLUDE_SLIST_DMEO
 extern int32_t slist_demo(void);
-#endif 
+#endif
 
-#if  INCLUDE_CLIST_DEMO 
+#if  INCLUDE_CLIST_DEMO
 extern int32_t clist_demo(void);
-#endif 
+#endif
 
-#define false 0 
+#if  INCLUDE_QUEUE_DEMO
+extern int32_t queue_demo(void);
+#endif
+
+
+#define false 0
 #define true  1
-//show progress 
+//show progress
 #define InitShowProgress()  fprintf(stdout, "Processing ... %3d%%", 0); fflush(stdout);
 #define ShowProgress(curPos,MaxPos) fprintf(stdout, "\b\b\b\b%3d%%", (char) (((curPos) *100)/MaxPos) ); fflush(stdout);
 
@@ -47,23 +55,23 @@ void usage(void )
 
 int32_t main(int32_t argc, char * argv[])
 {
-	
-	int32_t c_opt = false; 
+
+	int32_t c_opt = false;
 	int32_t v_opt = false;
-	int32_t v_val = 0; 
+	int32_t v_val = 0;
  do
   {
     fprintf(stdout,"demo tool\n\n");
     if (argc > 1)
     {
-      for (int32_t i=1; i < argc; i++) 
+      for (int32_t i=1; i < argc; i++)
 	  {
         char *argu_opt = NULL;
         argu_opt = argv[i];
         if (strcmp(argu_opt, "-c") == 0)
         {
           c_opt = true;
-        } 
+        }
 		else if (strcmp(argu_opt, "-v") == 0)
         {
 		  v_opt = true ;
@@ -73,14 +81,14 @@ int32_t main(int32_t argc, char * argv[])
 		  {
 		    printf("err: missing value with -v option.");
 		    usage();
-			return -1; 
+			return -1;
 		  }
 		}
 		else if (strcmp(argu_opt, "-h") == 0)
         {
 		  usage();
-		  return 0; 
-          
+		  return 0;
+
 	    }
 	  }
 	}
@@ -89,29 +97,35 @@ int32_t main(int32_t argc, char * argv[])
 		usage();
 		printf("[DEFAULT-DEMO]:");
 	}
-	
+
 	if (c_opt)  printf(" c_opt is enabled\n");
-	
+
 	if (v_opt)  printf(" v_opt is enabled with value 0x%x\n",v_val);
-    
-    //do something here for demo demo 
+
+    //do something here for demo demo
 #if  INLCUDE_LIST_DEMO
  double_link_list_demo() ;
-#endif 
+#endif
 
 
 #if INCLUDE_SLIST_DMEO
 	slist_demo();
-#endif 
+#endif
 
 #if INCLUDE_CLIST_DEMO
 	clist_demo();
-#endif 
-	
-	//end; 
-	
+#endif
+
+
+#if INCLUDE_QUEUE_DEMO
+
+
+    queue_demo();
+#endif
+	//end;
+
   }while(0);
-   
+
   return 0 ;
-  
+
 }
